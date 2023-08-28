@@ -28,5 +28,12 @@ pipeline {
                 sh 'dotnet build poc-local-jenkins.sln --configuration Release'
             }
         }
+        
+       stage('Test') {
+            steps {
+                // Run SpecFlow tests
+                sh 'dotnet test Example.Domain.Tests/Example.Domain.Tests.csproj --configuration Release'
+            }
+        }
     }
 }
