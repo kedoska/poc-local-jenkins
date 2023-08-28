@@ -15,13 +15,13 @@ pipeline {
         stage('Restore') {
             steps {
                 // Restore any dependencies for the project.
-                sh 'dotnet restore'
+                sh 'dotnet restore ${workspace}/poc-local-jenkins.sln'
             }
         }
         stage('Build') {
             steps {
                 // Build the project.
-                sh 'dotnet build --configuration Release'
+                sh 'dotnet build ${workspace}/poc-local-jenkins.sln --configuration Release'
             }
         }
     }
