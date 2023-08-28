@@ -1,4 +1,6 @@
 pipeline {
+    agent local-docker
+
     stages {
         stage('Checkout') {
             steps {
