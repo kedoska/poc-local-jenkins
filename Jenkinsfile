@@ -4,6 +4,10 @@ pipeline {
             image 'mcr.microsoft.com/dotnet/sdk:6.0' 
         }
     }
+    
+    environment {
+        HOME = '/tmp'
+    }
 
     stages {
         stage('Checkout') {
