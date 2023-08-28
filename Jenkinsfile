@@ -1,5 +1,5 @@
 pipeline {
-    agent local-docker
+    agent docker
 
     stages {
         stage('Checkout') {
